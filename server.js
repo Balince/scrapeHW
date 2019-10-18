@@ -12,6 +12,12 @@ var PORT = 3000;
 // Initialize Express
 var app = express();
 
+const MongoClient = require('mongodb').MongoClient;
+MongoClient.connect("mongodb://localhost:27017/scrapeHW", function (err, db) {
+   
+     if(err) throw err;
+
+    });
 // Configure middleware
 
 // Use morgan logger for logging requests
