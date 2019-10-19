@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_PURPLE_URI || "mongodb://localhost/scrapeHW";
+var MONGODB_URI = process.env.MONGOLAB_PURPLE_URI || "mongodb://localhost/scrapeHW";
 mongoose.connect(MONGODB_URI);
 
 // Routes
