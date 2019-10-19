@@ -19,9 +19,6 @@ var app = express();
 
 //     });
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
-mongoose.connect(MONGODB_URI);
 // Configure middleware
 
 // Use morgan logger for logging requests
@@ -33,7 +30,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-var MONGODB_PURPLE_URI = process.env.MONGODB_PURPLE_URI || "mongodb://localhost/scrapeHW";
+var MONGODB_URI = process.env.MONGODB_PURPLE_URI || "mongodb://localhost/scrapeHW";
 mongoose.connect(MONGODB_URI);
 
 // Routes
